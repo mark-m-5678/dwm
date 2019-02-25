@@ -1,4 +1,4 @@
-# This is a repository with a backup of my DWM config for my personal backup.
+# This is a repository with a backup of my DWM config. Nothing interesting.
 # My patches:
 - gridmode
 - attachaside
