@@ -55,7 +55,6 @@ static const Layout layouts[] = {
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
-#define CMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -72,7 +71,8 @@ static const char *cmdsoundup[]  = { "lmc", "up", "5", NULL};
 static const char *cmdsounddown[]  = { "lmc", "down", "5", NULL};
 static const char *cmdsoundmute[] = { "lmc", "mute", NULL};
 static const char *cmdlock[]  = { "slock", NULL };
-static const char *cmdscreenshot[] = {"scrot", NULL};
+static const char *dmenuunicode[] = { "dmeuunicode", NULL };
+static const char *network[] = { "nmtui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -107,9 +107,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, rotatestack,    {.i = +1 } },
 	{ MODKEY,                       XK_comma,  rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_r,      focusmon,       {.i = +1 } },
-	{ MODKEY,			XK_F10,	   spawn,	   {.v = cmdscreenshot } },
-	{ MODKEY,			XK_F12,	   spawn,	   CMD("st -e nmtui") },
-	{ MODKEY,			XK_F4,	   spawn,	   CMD("st -e dmenuunicode") },
+	{ MODKEY,			XK_F12,	   spawn,	   {.v = network } },
+	{ MODKEY,			XK_F4,	   spawn,	   {.v = dmenuunicode } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
