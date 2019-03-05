@@ -88,6 +88,7 @@ static Key keys[] = {
 	{ 0,                            XF86AudioMute,             spawn,          {.v = cmdsoundmute } },
 	{ 0,                            XF86AudioRaiseVolume,      spawn,          {.v = cmdsoundup } },
 	{ 0,                            XF86AudioLowerVolume,      spawn,          {.v = cmdsounddown } },
+	{ 0,				XK_Print,  spawn,	   {.v = cmdscrot } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
@@ -108,7 +109,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, rotatestack,    {.i = +1 } },
 	{ MODKEY,                       XK_comma,  rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_r,      focusmon,       {.i = +1 } },
-	{ MODKEY,			XK_Print,  spawn,	   {.v = cmdscrot } },
 	{ MODKEY,			XK_F12,	   spawn,	   CMD("st -e nmtui") },
 	{ MODKEY,			XK_F4,	   spawn,	   CMD("st -e dmenuunicode") },
 	TAGKEYS(                        XK_1,                      0)
