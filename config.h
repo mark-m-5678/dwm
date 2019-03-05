@@ -49,6 +49,7 @@ static const Layout layouts[] = {
 #define XF86AudioMute			0x1008ff12
 #define XF86AudioLowerVolume		0x1008ff11
 #define XF86AudioRaiseVolume		0x1008ff13
+#define XF86PrintScreen			0x1008ff61
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -72,7 +73,7 @@ static const char *cmdsoundup[]  = { "lmc", "up", "5", NULL};
 static const char *cmdsounddown[]  = { "lmc", "down", "5", NULL};
 static const char *cmdsoundmute[] = { "lmc", "mute", NULL};
 static const char *cmdlock[]  = { "slock", NULL };
-static const char *cmdscreenshot[] = {"scrot", NULL};
+static const char *cmdscrot[] = { "scrot", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -107,7 +108,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, rotatestack,    {.i = +1 } },
 	{ MODKEY,                       XK_comma,  rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_r,      focusmon,       {.i = +1 } },
-	{ MODKEY,			XK_F10,	   spawn,	   {.v = cmdscreenshot } },
+	{ MODKEY,			XK_Print,  spawn,	   {.v = cmdscrot } },
 	{ MODKEY,			XK_F12,	   spawn,	   CMD("st -e nmtui") },
 	{ MODKEY,			XK_F4,	   spawn,	   CMD("st -e dmenuunicode") },
 	TAGKEYS(                        XK_1,                      0)
