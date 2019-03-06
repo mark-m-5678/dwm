@@ -50,6 +50,7 @@ static const Layout layouts[] = {
 #define XF86AudioLowerVolume		0x1008ff11
 #define XF86AudioRaiseVolume		0x1008ff13
 #define XF86PrintScreen			0x1008ff61
+#define XF86Launch1			0x1008ff41 
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -110,7 +111,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_comma,  rotatestack,    {.i = -1 } },
 	{ MODKEY,                       XK_r,      focusmon,       {.i = +1 } },
 	{ MODKEY,			XK_F12,	   spawn,	   CMD("st -e nmtui") },
-	{ MODKEY,			XK_F4,	   spawn,	   CMD("st -e dmenuunicode") },
+	{ MODKEY,			XK_grave,  spawn,	   CMD("st -e dmenuunicode") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
