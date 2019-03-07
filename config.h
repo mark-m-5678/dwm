@@ -51,6 +51,7 @@ static const Layout layouts[] = {
 #define XF86AudioRaiseVolume		0x1008ff13
 #define XF86PrintScreen			0x1008ff61
 #define XF86Launch1			0x1008ff41 
+#define XF86ScreenSaver			0x1008ff2d
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -90,6 +91,7 @@ static Key keys[] = {
 	{ 0,                            XF86AudioRaiseVolume,      spawn,          {.v = cmdsoundup } },
 	{ 0,                            XF86AudioLowerVolume,      spawn,          {.v = cmdsounddown } },
 	{ 0,				XF86Launch1,		   spawn,	   {.v = termcmd } },
+	{ 0,				XF86ScreenSaver,	   spawn,	   {.v = cmdlock } },
 	{ MODKEY,			XK_Print,  spawn,	   {.v = cmdscrot } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
