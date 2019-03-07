@@ -89,6 +89,7 @@ static Key keys[] = {
 	{ 0,                            XF86AudioMute,             spawn,          {.v = cmdsoundmute } },
 	{ 0,                            XF86AudioRaiseVolume,      spawn,          {.v = cmdsoundup } },
 	{ 0,                            XF86AudioLowerVolume,      spawn,          {.v = cmdsounddown } },
+	{ 0,				XF86Launch1,		   spawn,	   {.v = termcmd } },
 	{ MODKEY,			XK_Print,  spawn,	   {.v = cmdscrot } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
