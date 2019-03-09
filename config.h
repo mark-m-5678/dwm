@@ -49,6 +49,9 @@ static const Layout layouts[] = {
 #define XF86AudioMute			0x1008ff12
 #define XF86AudioLowerVolume		0x1008ff11
 #define XF86AudioRaiseVolume		0x1008ff13
+#define XF86AudioPlay			0x1008ff14
+#define XF86AudioNext			0x1008ff17
+#define XF86AudioPrev			0x1008ff16
 #define XF86PrintScreen			0x1008ff61
 #define XF86Launch1			0x1008ff41 
 #define XF86ScreenSaver			0x1008ff2d
@@ -73,6 +76,9 @@ static const char *cmdbrightnessup[]  = { "xbacklight", "-inc", "15", NULL };
 static const char *cmdbrightnessdown[]  = { "xbacklight", "-dec", "15", NULL };
 static const char *cmdsoundup[]  = { "lmc", "up", "5", NULL};
 static const char *cmdsounddown[]  = { "lmc", "down", "5", NULL};
+static const char *cmdmusicpause[] = { "mpc", "toggle", NULL};
+static const char *cmdmusicnext[] = { "lmc", "next", NULL};
+static const char *cmdmusicprev[] = { "lmc", "prev", NULL};
 static const char *cmdsoundmute[] = { "lmc", "mute", NULL};
 static const char *cmdlock[]  = { "slock", NULL };
 static const char *cmdscrot[] = { "scrot", NULL };
@@ -90,6 +96,9 @@ static Key keys[] = {
 	{ 0,                            XF86AudioMute,             spawn,          {.v = cmdsoundmute } },
 	{ 0,                            XF86AudioRaiseVolume,      spawn,          {.v = cmdsoundup } },
 	{ 0,                            XF86AudioLowerVolume,      spawn,          {.v = cmdsounddown } },
+	{ 0,				XF86AudioPlay,		   spawn,	   {.v = cmdmusicpause } },
+	{ 0,				XF86AudioNext,		   spawn,	   {.v = cmdmusicnext } },
+	{ 0,				XF86AudioPrev,		   spawn,	   {.v = cmdmusicprev } },
 	{ 0,				XF86Launch1,		   spawn,	   {.v = termcmd } },
 	{ 0,				XF86ScreenSaver,	   spawn,	   {.v = cmdlock } },
 	{ MODKEY,			XK_Print,  spawn,	   {.v = cmdscrot } },
