@@ -125,6 +125,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,      focusmon,       {.i = +1 } },
 	{ MODKEY,			XK_F12,	   spawn,	   CMD("st -e nmtui") },
 	{ MODKEY,			XK_grave,  spawn,	   CMD("st -e dmenuunicode") },
+	{ MODKEY,			XK_n,	   spawn,	   CMD("st -e ncmpcpp") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
