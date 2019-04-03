@@ -5,3 +5,9 @@
 - rotatestack
 - pertag
 - restartsig
+
+```
+git clone
+make
+sudo make install
+```
