@@ -99,7 +99,6 @@ static Key keys[] = {
 	{ 0,				XF86AudioPlay,		   spawn,	   {.v = cmdmusicpause } },
 	{ 0,				XF86AudioNext,		   spawn,	   {.v = cmdmusicnext } },
 	{ 0,				XF86AudioPrev,		   spawn,	   {.v = cmdmusicprev } },
-	{ 0,				XF86Launch1,		   spawn,	   {.v = termcmd } },
 	{ 0,				XF86ScreenSaver,	   spawn,	   {.v = cmdlock } },
 	{ MODKEY,			XK_Print,  spawn,	   {.v = cmdscrot } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
