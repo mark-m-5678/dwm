@@ -83,6 +83,7 @@ static const char *cmdsoundmute[] = { "lmc", "mute", NULL};
 static const char *cmdlock[]  = { "slock", NULL };
 static const char *cmdscrot[] = { "scrot", NULL };
 
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Insert, spawn,          {.v = clipcmd } },
