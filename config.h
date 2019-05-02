@@ -82,7 +82,7 @@ static const char *cmdmusicprev[] = { "lmc", "prev", NULL};
 static const char *cmdsoundmute[] = { "lmc", "mute", NULL};
 static const char *cmdlock[]  = { "slock", NULL };
 static const char *cmdscrot[] = { "scrot", NULL };
-
+static const char *cmdmusic[] = { "gpmdp", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -126,7 +126,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_c,	   spawn,	   CMD("st -e R -q") },
 	{ MODKEY,			XK_F12,	   spawn,	   CMD("st -e nmtui") },
 	{ MODKEY,			XK_grave,  spawn,	   CMD("st -e dmenuunicode") },
-	{ MODKEY,			XK_n,	   spawn,	   CMD("st -e ncmpcpp") },
+	{ MODKEY,			XK_n,	   spawn,	   {.v = cmdmusic } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
