@@ -70,7 +70,6 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", "-e", "tmux", NULL };
-static const char *urlcmd[]  = { "clipmenu-url", NULL };
 static const char *clipcmd[]  = { "clipmenu", NULL };
 static const char *cmdbrightnessup[]  = { "xbacklight", "-inc", "15", NULL };
 static const char *cmdbrightnessdown[]  = { "xbacklight", "-dec", "15", NULL };
@@ -82,12 +81,12 @@ static const char *cmdmusicprev[] = { "lmc", "prev", NULL};
 static const char *cmdsoundmute[] = { "lmc", "mute", NULL};
 static const char *cmdlock[]  = { "slock", NULL };
 static const char *cmdscrot[] = { "scrot", NULL };
-static const char *cmdmusic[] = { "gpmdp", NULL };
+static const char *cmdmusic[] = { "spotify", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Insert, spawn,          {.v = clipcmd } },
-	{ MODKEY,                       XK_o,      spawn,          {.v = urlcmd } },
+/*	{ MODKEY,                       XK_o,      spawn,          {.v = urlcmd } }, */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
